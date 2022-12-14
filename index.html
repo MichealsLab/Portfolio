@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="MikesLab" />
+	
+	<title>MikesLab</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/home.css">
+	</head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-88XC7MJ1XY"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-88XC7MJ1XY');
+	</script>
+
+
+	<body>
+			<header>
+				<div class="wrapper">
+					<div class="logo">
+						<img src="images/mikeslablogo.svg" alt="logo">
+					</div>
+					<nav>
+						<a style="text-decoration: none" href="/projects.html/">Projects</a>
+						<a style="text-decoration: none" href="/index.html/">Home</a>
+					</nav>
+					<navtitle>Home</navtitle>
+				</div>
+			</header>
+
+		<div class="copied" id="copied">
+			<img src="images/home/copied.svg" alt="Copied icon">
+		</div>
+		
+		<div class="card-container">
+			<img src="images/home/card.svg" alt="logo" style="width: 100%">
+			<div class="contacts-container">
+				<div class="grid-container">
+					<div class="grid-item">
+						<input id="github" type="text" value="MichealsLab" hidden>
+						<img id="github-btn" src="images/home/github.svg" alt="MichealsLab" onclick="copy(this.id)">
+					</div>
+					<div class="grid-item">
+						<input id="mail" type="text" value="dev@mikeslab.it" hidden>
+						<img id="mail-btn" src="images/home/gmail.svg" alt="dev@mikeslab.it" onclick="copy(this.id)">
+					</div>
+					<div class="grid-item">
+						<input id="discord" type="text" value="Micheal#8198" hidden>
+						<img id="discord-btn" src="images/home/discord.svg" alt="Micheal#8198" onclick="copy(this.id)">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).on("dragstart", function (e) {
+				e.preventDefault();
+			});
+		</script>
+
+		<script type="text/javascript">
+			document.addEventListener('contextmenu', event => event.preventDefault());
+
+			window.addEventListener("selectstart", function(event) {
+				event.preventDefault();
+			});
+
+			$(document).on("dragstart", function (e) {
+				e.preventDefault();
+			});
+
+
+			//one-line version
+			addEventListener("selectstart", event => event.preventDefault());
+
+			function copy(id) {
+				let copyText;
+
+				if(id === "github-btn") {
+					copyText = document.getElementById("github");
+				} else if(id === "discord-btn") {
+					copyText = document.getElementById("discord");
+				} else if(id === "mail-btn") {
+					copyText = document.getElementById("mail");
+				}
+				copyText.hidden = false;
+				copyText.select();
+				document.execCommand("copy");
+				copyText.hidden = true;
+
+				document.getElementById("copied").style.display = "block";
+				setTimeout(function(){ document.getElementById("copied").style.display = "none"; }, 1000);
+
+
+			}
+
+		</script>
+
+	</body>
+</html>
+

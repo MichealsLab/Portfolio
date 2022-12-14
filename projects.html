@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="MikesLab" />
+
+  <title>MikesLab</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <meta name="github:url" content="github.com/MichealsLab" />
+
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/project-style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88XC7MJ1XY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-88XC7MJ1XY');
+</script>
+
+
+
+<body>
+  <div class="box-area">
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <img src="images/mikeslablogo.svg" alt="logo">
+        </div>
+        <nav>
+          <a style="text-decoration: none" href="/projects.html/">Projects</a>
+          <a style="text-decoration: none" href="/index.html/">Home</a>
+        </nav>
+        <navtitle>Projects</navtitle>
+      </div>
+    </header>
+  </div>
+
+  <div id="fullpage" onclick="this.style.display='none';"></div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <img id="slide-1" src="images/identity-project.svg" alt="Project Intro">
+            <img id="slide-2" src="images/identity/1.jpg" onclick="onClick(this.id)" alt="Plug-in Example">
+            <img id="slide-3" src="images/identity/2.png" onclick="onClick(this.id)" alt="Plug-in Example">
+            <img id="slide-4" src="images/identity/3.png" onclick="onClick(this.id)" alt="Plug-in Example">
+            <img id="slide-5" src="images/identity/4.png" onclick="onClick(this.id)" alt="Plug-in Example">
+            <img id="slide-6" src="images/identity/5.png" onclick="onClick(this.id)" alt="Plug-in Example">
+          </div>
+          <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+            <a href="#slide-5"></a>
+            <a href="#slide-6"></a>
+          </div>
+        </div>
+      <div class="project-name">
+        <a href="https://github.com/MichealsLab/Identity">Identity</a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="" alt="Coming soon logo" >
+    </div>
+    <div class="grid-item">
+      <img src="images/comingsoon-2.svg" alt="Coming soon logo">
+    </div>
+    <div class="grid-item">
+      <img src="images/comingsoon-3.svg" alt="Coming soon logo">
+    </div>
+  </div>
+
+
+
+
+  <script type="text/javascript">
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    window.addEventListener("selectstart", function(event) {
+      event.preventDefault();
+    });
+
+
+    //one-line version
+    addEventListener("selectstart", event => event.preventDefault());
+
+    function onClick(id) {
+      const fullpage = document.getElementById('fullpage');
+      const image = document.getElementById(id);
+      fullpage.style.display = 'block';
+      fullpage.style.backgroundImage = 'url(' + image.src + ')';
+    }
+  </script>
+
+  <script>
+    $(document).on("dragstart", function (e) {
+      e.preventDefault();
+    });
+  </script>
+
+
+  </body>
+</html>

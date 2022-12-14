@@ -1,0 +1,70 @@
+
+
+body {
+    width: 100%;
+}
+
+.card-container {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+.contacts-container {
+    position: absolute;
+    top:  50%;
+    left: 68.5%;
+    transform: translate(-50%,-50%);
+}
+
+
+.grid-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 400px);
+    grid-template-rows: repeat(3, 45px);
+    grid-gap: 20px;
+    row-gap: 20px;
+    /* new styles below */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+
+
+.grid-item {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.1s;
+    transition: -webkit-transform 0.1s;
+    transition: transform 0.1s, -webkit-transform 0.1s;
+}
+
+.grid-item:active {
+::webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.grid-item img {
+    max-width: 90%;
+}
+
+
+.copied {
+    width: 7%;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none
+
+}

@@ -1,0 +1,152 @@
+
+
+
+@font-face {
+    font-family: 'ChillaxRegular';
+    src: url("../fonts/Chillax-Regular.otf");
+}
+
+@font-face {
+    font-family: 'ChillaxBold';
+    src: url("../fonts/Chillax-Semibold.otf");
+}
+
+.wrapper {
+    width: 100%;
+}
+
+
+.grid-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    grid-template-rows: repeat(1, 290px);
+    grid-gap: 20px;
+    row-gap: 10px;
+    /* new styles below */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 420px;
+    height: 231px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.grid-item:hover {
+    ::webkit-transform: scale(1.003);
+    transform: scale(1.003);
+}
+
+.grid-item img {
+    max-width: 100%;
+}
+
+.project-name {
+    position: absolute;
+    top: 230px;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #6A31FF;
+    text-align: center;
+}
+
+.project-name a {
+    text-decoration: none;
+}
+
+
+
+.slider-wrapper {
+    width: 420px;
+    height: 231px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.slider {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 1rem;
+    position: relative;
+    overflow-x: hidden;
+    width: 420px;
+    height: 231px;
+}
+
+.slider img {
+    position: relative;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 0.8rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+#fullpage {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+}
+
+.copied-container {
+    position: absolute; /* position the container relative to the viewport */
+    top: 50%; /* position the top  edge of the container at the middle of the parent */
+    left: 50%; /* position the left edge of the container at the middle of the parent */
+    transform: translate(-50%, -50%); /* translate the container to the top left, relative to its own dimension */
+}
+
+
+
+
+
+
+
+
