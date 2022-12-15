@@ -4,5 +4,5 @@
       <rect id="Rectangle_2" data-name="Rectangle 2" width="470" height="261" rx="16" transform="translate(412 290)" fill="#f9f7f7"/>
     </g>
   </g>
-  <text id="id" transform="translate(140 196)" fill="#1b5ba7" font-size="200" font-family="Chillax-Bold, Chillax" font-weight="700"><tspan x="0" y="0">id</tspan></text>
+  <text id="id" transform="translate(140 196)" fill="#1b5ba7" font-size="200" font-family="ChillaxBold" font-weight="700"><tspan x="0" y="0">id</tspan></text>
 </svg>
