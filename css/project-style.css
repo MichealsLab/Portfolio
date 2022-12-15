@@ -65,6 +65,10 @@
     color: #f9f7f7;
 }
 
+.project-name a:hover {
+    color: #9ccaff;
+}
+
 
 
 .slider-wrapper {

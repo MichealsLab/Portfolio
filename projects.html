@@ -41,7 +41,7 @@
     <header>
       <div class="wrapper">
         <div class="logo">
-          <img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/mikeslablogo.svg" alt="logo">
+          <img id="logo" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/mikeslablogo.svg" alt="logo">
         </div>
         <nav>
           <a style="text-decoration: none" href="/projects">Projects</a>
@@ -75,7 +75,7 @@
           </div>
         </div>
       <div class="project-name">
-        <a href="https://github.com/MichealsLab/Identity" target="_blank">Identity</a>
+        <a href="https://github.com/MichealsLab/Identity" target="_blank">Identity (Github)</a>
       </div>
     </div>
     <div class="grid-item">
@@ -95,6 +95,13 @@
 
 
   <script type="text/javascript">
+    document.addEventListener('click' , function(e) {
+      if (e.target.id === 'logo') {
+        location.reload();
+      }
+    });
+
+
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     window.addEventListener("selectstart", function(event) {

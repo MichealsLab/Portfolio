@@ -33,7 +33,7 @@
 			<header>
 				<div class="wrapper">
 					<div class="logo">
-						<img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/mikeslablogo.svg" alt="logo">
+						<img id="logo" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/mikeslablogo.svg" alt="logo">
 					</div>
 					<nav>
 						<a style="text-decoration: none" href="/projects">Projects</a>
@@ -80,7 +80,6 @@
 			"Enhance your server with custom Java plug-ins from MikesLab <br>experts in Bukkit, PaperMC, and BungeeCord."
 		</a>
 
-
 		<script>
 			$(document).on("dragstart", function (e) {
 				e.preventDefault();
@@ -88,6 +87,12 @@
 		</script>
 
 		<script type="text/javascript">
+			document.addEventListener('click' , function(e) {
+				if (e.target.id === 'logo') {
+					location.reload();
+				}
+			});
+
 			document.addEventListener('contextmenu', event => event.preventDefault());
 
 			window.addEventListener("selectstart", function(event) {
