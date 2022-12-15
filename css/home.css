@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'ChillaxBold';
+    src: url("../fonts/Chillax-Semibold.otf");
+}
 
 body {
     width: 100%;
@@ -15,7 +18,7 @@ body {
 
 .contacts-container {
     position: absolute;
-    top:  50%;
+    top: 50%;
     left: 68.5%;
     transform: translate(-50%,-50%);
 }
@@ -23,11 +26,13 @@ body {
 
 .grid-container {
     justify-items: center;
+    align-content: center;
     display: grid;
-    grid-template-columns: repeat(1, 400px);
-    grid-template-rows: repeat(3, 45px);
-    grid-gap: 20px;
-    row-gap: 20px;
+    grid-template-columns: repeat(3, 10vh);
+    grid-template-rows: repeat(2, 4.5vh);
+    grid-gap: 1.5vh;
+    row-gap: 2vh;
+    column-gap: 5px;
     /* new styles below */
     position: absolute;
     top: 50%;
@@ -37,6 +42,25 @@ body {
 }
 
 
+
+.fiverr-item {
+    grid-row: 2;
+    grid-column: 2;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.fiverr-item:active {
+::webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
 
 .grid-item {
     max-width: 100%;
@@ -63,8 +87,8 @@ body {
 .copied {
     width: 7%;
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 5vh;
+    right: 16vh;
     display: none
 
 }

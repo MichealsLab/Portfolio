@@ -52,20 +52,34 @@
 			<div class="contacts-container">
 				<div class="grid-container">
 					<div class="grid-item">
-						<input id="github" type="text" value="MichealsLab" hidden>
-						<img id="github-btn" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/github.svg" alt="MichealsLab" onclick="copy(this.id)">
+						<a href="https://github.com/MichealsLab" target="_blank">
+							<img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/github.svg" alt="Github icon">
+						</a>
 					</div>
 					<div class="grid-item">
-						<input id="mail" type="text" value="dev@mikeslab.it" hidden>
-						<img id="mail-btn" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/gmail.svg" alt="dev@mikeslab.it" onclick="copy(this.id)">
+						<img id="mail-btn" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/mail.svg" alt="Mail icon" onclick="copyMail()">
 					</div>
 					<div class="grid-item">
-						<input id="discord" type="text" value="Micheal#8198" hidden>
-						<img id="discord-btn" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/discord.svg" alt="Micheal#8198" onclick="copy(this.id)">
+						<a href="https://discordapp.com/users/350160924310634516" target="_blank">
+							<img id="discord-btn" src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/discord.svg" alt="Discord icon">
+						</a>
+					</div>
+					<div class="fiverr-item">
+						<a href="https://www.fiverr.com/mikeslabdevs" target="_blank">
+							<img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/fiverr.svg" alt="Fiverr icon">
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/ice-2.svg" alt="ice" style="width: 10%; display: block; position: absolute; left:101%; top: 10%; transform: translate(-50%, -50%); z-index: 0">
+		<img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/ice-4.svg" alt="ice" style="width: 25%; display: block; position: absolute; right: 62%; top: 92%; transform: translate(-50%, -50%); z-index: -1">
+		<img src="https://raw.githack.com/MichealsLab/Portfolio/master/images/home/ice-5.svg" alt="ice" style="width: 20%; display: block; position: absolute; left: 90%; top: 87%; transform: translate(-50%, -50%); z-index: -1">
+		<a style="font-family: Lato, sans-serif; color: #fff; font-size: 2.5vh; font-weight: bold; position: absolute; left: 50%; top: 87%; transform: translate(-50%, -50%);">
+			"Enhance your server with custom Java plug-ins from MikesLab <br>experts in Bukkit, PaperMC, and BungeeCord."
+		</a>
+
 
 		<script>
 			$(document).on("dragstart", function (e) {
@@ -88,25 +102,10 @@
 			//one-line version
 			addEventListener("selectstart", event => event.preventDefault());
 
-			function copy(id) {
-				let copyText;
-
-				if(id === "github-btn") {
-					copyText = document.getElementById("github");
-				} else if(id === "discord-btn") {
-					copyText = document.getElementById("discord");
-				} else if(id === "mail-btn") {
-					copyText = document.getElementById("mail");
-				}
-				copyText.hidden = false;
-				copyText.select();
-				document.execCommand("copy");
-				copyText.hidden = true;
-
+			function copyMail() {
+				navigator.clipboard.writeText("dev@mikeslab.it");
 				document.getElementById("copied").style.display = "block";
 				setTimeout(function(){ document.getElementById("copied").style.display = "none"; }, 1000);
-
-
 			}
 
 		</script>
